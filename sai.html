@@ -61,11 +61,17 @@
         </div>
     </div>
 
-    <!-- Autoplay Background Music -->
-    <audio autoplay loop muted>
-        <source src="https://waneutron.github.io/happybirthdaysai/seasons.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <audio id="bg-music" autoplay loop>
+    <source src="seasons.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById("bg-music");
+    audio.play().catch(error => console.log("Autoplay blocked:", error));
+});
+</script>
 
 </body>
 </html>
