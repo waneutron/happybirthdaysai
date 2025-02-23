@@ -49,6 +49,8 @@
             I can't deny that you are my moon that brightens my night. So happy birthday, and I love you sayangku! ❤️"
         </p>
 
+        <button onclick="playMusic()">🎵 Play Music</button>
+
         <div class="images">
             <img src="https://waneutron.github.io/happybirthdaysai/b5091006-c88f-4857-bf67-aeb50ea7fbb4.JPG" alt="Nur Saidatul Syahfinas">
             <img src="https://waneutron.github.io/happybirthdaysai/IMG_5156.jpg" alt="Nur Saidatul Syahfinas">
@@ -60,17 +62,16 @@
             Made with ❤️ just for you!
         </div>
     </div>
-
-  <audio id="bg-music" autoplay loop>
+<audio id="bg-music" loop>
     <source src="seasons.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+function playMusic() {
     var audio = document.getElementById("bg-music");
-    audio.play().catch(error => console.log("Autoplay blocked:", error));
-});
+    audio.play();
+}
 </script>
 
 </body>
